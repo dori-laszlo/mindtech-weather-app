@@ -1,0 +1,101 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["prettier", "airbnb", "react-app"],
+  "env": {
+      "browser": true,
+      "commonjs": true,
+      "es6": true,
+      "node": true
+  },
+  "plugins": ["compat", "unicorn"],
+  "parserOptions": {
+      "ecmaFeatures": {
+          "jsx": true
+      },
+      "ecmaVersion": 9,
+      "sourceType": "module"
+  },
+  "rules": {
+      "arrow-parens": [
+          2,
+          "as-needed",
+          {
+              "requireForBlockBody": false
+          }
+      ],
+      "compat/compat": "error",
+      "constructor-super": "warn",
+      "implicit-arrow-linebreak": 0,
+      "indent": ["error", 2],
+      "no-confusing-arrow": "off",
+      "no-const-assign": "error",
+      "no-this-before-super": "error",
+      "no-unreachable": "error",
+      "no-unused-vars": [
+          "error",
+          {
+              "varsIgnorePattern": "React"
+          }
+      ],
+      "valid-typeof": "warn",
+
+      "react/destructuring-assignment": "never",
+      "react/jsx-indent-props": [1, 4],
+      "react/jsx-indent": [1, 4],
+      "react/jsx-one-expression-per-line": 0,
+      "react/react-in-jsx-scope": "error",
+      "react/no-unknown-property": [
+          2,
+          {
+              "ignore": ["class"]
+          }
+      ],
+      "react/jsx-filename-extension": [
+          1,
+          {
+              "extensions": [".jsx"]
+          }
+      ],
+
+      "jsx-a11y/href-no-hash": "off",
+      "jsx-a11y/anchor-is-valid": [
+          "warn",
+          {
+              "aspects": ["invalidHref"]
+          }
+      ],
+
+      "unicorn/catch-error-name": [
+          "off",
+          {
+              "name": "err"
+          }
+      ],
+      "unicorn/explicit-length-check": "error",
+      "unicorn/filename-case": [
+          "off",
+          {
+              "case": "camelCase"
+          }
+      ],
+      "unicorn/custom-error-definition": "off",
+      "unicorn/error-message": "error",
+      "unicorn/escape-case": "error",
+      "unicorn/import-index": "error",
+      "unicorn/new-for-builtins": "error",
+      "unicorn/no-abusive-eslint-disable": "error",
+      "unicorn/no-array-instanceof": "error",
+      "unicorn/no-fn-reference-in-iterator": "off",
+      "unicorn/no-hex-escape": "error",
+      "unicorn/no-new-buffer": "error",
+      "unicorn/no-process-exit": "error",
+      "unicorn/no-unsafe-regex": "off",
+      "unicorn/number-literal-case": "error",
+      "unicorn/prefer-add-event-listener": "error",
+      "unicorn/prefer-spread": "error",
+      "unicorn/prefer-starts-ends-with": "error",
+      "unicorn/prefer-type-error": "error",
+      "unicorn/regex-shorthand": "error",
+      "unicorn/throw-new-error": "error"
+  }
+}
