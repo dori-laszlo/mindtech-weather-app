@@ -8,14 +8,16 @@ import './app.css';
 const API_KEY = '94405e6cf2cc96fb5e6cd10c101446c7';
 
 class App extends Component {
-  //I just tested here if the API call works, with logging a given city data to the console when the component mounted.
-  componentDidMount() {
+  // This method calls the API and get a given data from it in this state of the app.
+  getDataFromApi = (e) => {
+    console.log(e);
+    e.preventDefault();
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=Budapest,hu&appid=${API_KEY}&units=metric`,
     )
       .then(res => res.json())
       .then(json => console.log(json));
-  }
+  };
 
   render() {
     return (
@@ -24,7 +26,7 @@ class App extends Component {
           <Logo />
           <Title />
         </header>
-        <Select />
+        <Select getWeather={this.getDataFromApi}/>
         <WeatherTile />
       </main>
     );
