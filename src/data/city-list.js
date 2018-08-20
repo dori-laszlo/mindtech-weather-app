@@ -1,6 +1,6 @@
 // This array of object contains the list of the cities with name, courty and ID.
 
-let cities = [
+const cities = [
   {
     name: 'Arhus',
     country: 'DK',
@@ -167,13 +167,5 @@ function compare(a, b) {
   return comparison;
 }
 
-//This will be the new array with the sorted objects.
-let sortedCities = [];
-
-//This function can push the sorted elements into another array and returns it.
-function sorting(sortedCities) {
-  sortedCities.push(cities.sort(compare));
-  return sortedCities;
-}
-
-sorting(sortedCities);
+const sortedCities = cities.sort(compare);
+export default sortedCities;
