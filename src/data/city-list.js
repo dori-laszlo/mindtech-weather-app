@@ -167,5 +167,6 @@ function compare(a, b) {
   return comparison;
 }
 
+// This creates a sorted array from the elements of the original "cities" array.
 const sortedCities = cities.sort(compare);
 export default sortedCities;
