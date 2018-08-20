@@ -8,7 +8,7 @@ const Select = props => (
     <select id="select-city">
       <option value="">--Select a city...--</option>
       {cities.map(city => (
-        <option value="">
+        <option cityId={city.id} value="">
           {city.name} ({city.country})
         </option>
       ))}

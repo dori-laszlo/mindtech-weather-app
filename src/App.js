@@ -13,7 +13,7 @@ class App extends Component {
     console.log(e);
     e.preventDefault();
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=Budapest,hu&appid=${API_KEY}&units=metric`,
+      `https://api.openweathermap.org/data/2.5/weather?id=2172797&appid=${API_KEY}&units=metric`,
     )
       .then(res => res.json())
       .then(json => console.log(json));
