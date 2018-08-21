@@ -15,7 +15,6 @@ function getDataFromApi(id) {
     })
     .then(response => response.json())
     .then(data => {
-      console.log(data);
       return data;
     })
     .catch(error => {

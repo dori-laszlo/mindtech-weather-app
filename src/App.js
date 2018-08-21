@@ -6,7 +6,6 @@ import getDataFromApi from './api/getDataFromApi';
 import WeatherTile from './components/WeatherTile';
 import './app.css';
 
-
 class App extends Component {
   // The state object will contain the ID of the selected city, to forward it later
   // to the url in the API call as a city id to identify the selected city, which is null by default.
@@ -24,7 +23,6 @@ class App extends Component {
   // Then it set the selectedCity in the state object to this unique ID.
   handleChange = e => {
     const cityId = e.target.value;
-    console.log(cityId);
     this.setState({
       selectedCity: cityId,
     });
@@ -44,7 +42,6 @@ class App extends Component {
         humidity: data.main.humidity,
       }),
     );
-    console.log(this.state.city + this.state.temperature);
   };
 
   render() {
@@ -55,7 +52,13 @@ class App extends Component {
           <Title />
         </header>
         <Select submit={this.handleSubmit} change={this.handleChange} />
-        <WeatherTile />
+        <WeatherTile
+          city={this.state.city}
+          country={this.state.country}
+          temperature={this.state.temperature}
+          description={this.state.description}
+          humidity={this.state.humidity}
+        />
       </main>
     );
   }
