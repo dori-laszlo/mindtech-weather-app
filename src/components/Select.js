@@ -1,19 +1,21 @@
 import React from 'react';
+// It needs to read the city-list file to gain the data from it dynamically into the select options.
 import cities from '../data/city-list';
 
-// Select must be in a form, to have an "onSubmit" event, which can give to the App component
-// the "getWeather" props, can call the getDataFromApi methon in the App component which is the API call itself.
+// Select must be in a <form>, to have an "onSubmit" and "onChange" event, which can trigger the
+// handleSubmit and handleChange methods in App.js via props.
 const Select = props => (
-  <form onSubmit={props.getWeather}>
-    <select id="select-city">
+  <form onSubmit={props.submit}>
+    <select id="select-city" onChange={props.change}>
       <option value="">--Select a city...--</option>
+      {/* This part iterates on the array of the city data and gain the values from it. */}
       {cities.map(city => (
-        <option cityId={city.id} value="">
+        <option value={city.id}>
           {city.name} ({city.country})
         </option>
       ))}
     </select>
-    <input type="submit" value="Find!" />
+    <input type="submit" value="Find!" onSubmit={this.submit} />
   </form>
 );
 
