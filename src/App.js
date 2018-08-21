@@ -4,7 +4,7 @@ import Title from './components/Title';
 import Select from './components/Select';
 import getDataFromApi from './api/getDataFromApi';
 import WeatherTile from './components/WeatherTile';
-import './app.css';
+import './App.css';
 
 class App extends Component {
   // The state object will contain the ID of the selected city, to forward it later
