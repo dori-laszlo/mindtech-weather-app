@@ -14,11 +14,11 @@ class App extends Component {
     selectedCity: null,
   };
 
-  // This method calls the API and get a given data from it in this state of the app.
-  getDataFromApi = e => {
-    e.preventDefault();
+  // This method calls the API and get data from the city which has the ID what this method
+  // get from the handleSubmit method as parameter.
+  getDataFromApi = id => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?id=2172797&appid=${API_KEY}&units=metric`,
+      `https://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${API_KEY}&units=metric`,
     )
       .then(res => res.json())
       .then(json => console.log(json));
@@ -34,6 +34,13 @@ class App extends Component {
       selectedCity: cityId,
     });
   };
+
+  // This method is triggered when the form has been submitted by the submit button.
+  // It calls the getDataFromApi method with the selected city's ID as a property.
+  handleSubmit = e => {
+    e.preventDefault();
+    this.getDataFromApi(this.state.selectedCity);
+  }
 
   render() {
     return (
