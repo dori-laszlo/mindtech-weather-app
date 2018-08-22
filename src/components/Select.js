@@ -17,7 +17,8 @@ const Select = props => (
         </option>
       ))}
     </select>
-    <input type="submit" value="Find!" onSubmit={this.submit} />
+    {/* This gets its className from the state's classSubmit value. */}
+    <input className={props.classSubmit} type="submit" value="Find!" onSubmit={props.submit} />
   </form>
 );
 

@@ -18,16 +18,27 @@ class App extends Component {
     humidity: null,
     // This stands for to change the weatherTile visible, because it's unvisible unless we press the submit button.
     class: 'none',
+    classSubmit: 'button-none',
   };
 
   // This method handles the event when select option has changed in the form.
   // It takes the selected option's value which is the "id" key of each city from the city-list.
-  // Then it set the selectedCity in the state object to this unique ID.
+  // Then it set the selectedCity in the state object to this unique ID, and the classSubmit to displayed or not displayed.
   handleChange = e => {
     const cityId = e.target.value;
-    this.setState({
-      selectedCity: cityId,
-    });
+    // If the submit button doesn't displayed which is the default and the selected option is not the default,
+    // makes the button displayed by changing its classSubmit class is the state.
+    if (this.state.classSubmit !== 'displayed' && cityId !== 'default') {
+      this.setState({
+        selectedCity: cityId,
+        classSubmit: 'button-displayed',
+      });
+      // Else leave it or make it unvisible.
+    } else {
+      this.setState({
+        classSubmit: 'button-none',
+      });
+    }
   };
 
   // This method is triggered when the form has been submitted by the submit button.
@@ -35,6 +46,7 @@ class App extends Component {
   // It sets the state object to the data get from the getDataFromApi function.
   handleSubmit = e => {
     e.preventDefault();
+    // It doesn't triggered when the default option is selected within the Select.
     if (this.state.selectedCity !== 'default') {
       getDataFromApi(this.state.selectedCity).then(data =>
         this.setState({
@@ -49,7 +61,7 @@ class App extends Component {
       );
     } else {
       this.setState({
-        selectedCity: 'default',
+        classSubmit: 'button-none',
       });
     }
   };
@@ -61,7 +73,11 @@ class App extends Component {
           <Logo />
           <Title />
         </header>
-        <Select submit={this.handleSubmit} change={this.handleChange} />
+        <Select
+          submit={this.handleSubmit}
+          change={this.handleChange}
+          classSubmit={this.state.classSubmit}
+        />
         <WeatherTile
           city={this.state.city}
           country={this.state.country}
