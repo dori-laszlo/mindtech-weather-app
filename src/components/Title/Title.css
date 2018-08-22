@@ -6,6 +6,9 @@
   color: rgba(255, 255, 255, 0.75);
   margin: 5% auto 0 auto;
   line-height: 1em; }
+  @media screen and (max-width: 375px) {
+    .title {
+      font-size: 3em; } }
 
 .title-sub {
   font-family: "Grand Hotel", cursive;
@@ -13,3 +16,6 @@
   font-size: 3em;
   text-align: center;
   margin-top: 0; }
+  @media screen and (max-width: 375px) {
+    .title-sub {
+      font-size: 2em; } }

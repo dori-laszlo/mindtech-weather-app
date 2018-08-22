@@ -10,11 +10,19 @@
   border-radius: 20px;
   border: 2px solid rgba(38, 228, 168, 0.3);
   padding: 30px;
-  text-align: center;
   font-family: "Exo", Helvetica, sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
+  @media screen and (max-width: 375px) {
+    .displayed {
+      width: 70%;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.1); } }
+  @media screen and (max-width: 320px) {
+    .displayed {
+      padding: 20px;
+      width: 80%; } }
 
 .tile-city {
   font-size: 3em;
@@ -22,6 +30,10 @@
   margin: 0;
   text-align: start;
   line-height: 1em; }
+  @media screen and (max-width: 375px) {
+    .tile-city {
+      font-size: 2em;
+      text-align: center; } }
 
 .tile-country {
   font-size: 1.5em;
@@ -29,6 +41,10 @@
   text-align: start;
   margin: 0;
   font-weight: 100; }
+  @media screen and (max-width: 375px) {
+    .tile-country {
+      font-size: 1.2em;
+      text-align: center; } }
 
 .description {
   font-size: 1em;
@@ -36,10 +52,18 @@
 
 .city-name-container {
   max-width: 60%; }
+  @media screen and (max-width: 375px) {
+    .city-name-container {
+      max-width: 100%; } }
 
 .weather-data {
   text-align: start;
   margin-left: 50px; }
+  @media screen and (max-width: 375px) {
+    .weather-data {
+      font-size: 1em;
+      text-align: center;
+      margin: 20px auto 0 auto; } }
 
 .temp {
   color: white;
@@ -47,6 +71,9 @@
   margin: 0;
   line-height: 1em;
   margin-bottom: 5px; }
+  @media screen and (max-width: 320px) {
+    .temp {
+      font-size: 2.5em; } }
 
 .description, .humidity {
   color: #D35E5E;
