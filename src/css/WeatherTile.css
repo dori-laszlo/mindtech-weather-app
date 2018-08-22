@@ -1,5 +1,53 @@
-.weather-tile {
-  margin-top: 5%; }
-
 .none {
   display: none; }
+
+.displayed {
+  max-width: 90%;
+  min-width: 40%;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 20px auto 0 auto;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  border: 2px solid rgba(38, 228, 168, 0.3);
+  padding: 30px;
+  text-align: center;
+  font-family: "Exo", Helvetica, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+
+#tile-city {
+  font-size: 3em;
+  color: #26e4a8;
+  margin: 0;
+  text-align: start;
+  line-height: 1em; }
+
+#tile-country {
+  font-size: 1.5em;
+  color: #26e4a8;
+  text-align: start;
+  margin: 0;
+  font-weight: 100; }
+
+#description {
+  font-size: 1em;
+  text-transform: uppercase; }
+
+.city-name-container {
+  max-width: 60%; }
+
+.weather-data {
+  text-align: start;
+  margin-left: 50px; }
+
+#temp {
+  color: white;
+  font-size: 3em;
+  margin: 0;
+  line-height: 1em;
+  margin-bottom: 5px; }
+
+#description, #humidity {
+  color: #D35E5E;
+  margin: 0; }

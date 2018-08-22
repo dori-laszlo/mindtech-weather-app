@@ -9,13 +9,15 @@ const WeatherTile = props => (
       <p id="tile-city">{props.city}</p>
       <p id="tile-country">{props.country}</p>
     </div>
-    <p>{props.description}</p>
-    <p className="" id="temp">
-      {props.temperature} °C
-    </p>
-    <p className="{props.class}" id="humidity">
-      Humidity: {props.humidity} %
-    </p>
+    <div className="weather-data">
+      <p className="" id="temp">
+        {props.temperature} °C
+      </p>
+      <p id="description">{props.description}</p>
+      <p className="{props.class}" id="humidity">
+        Humidity: {props.humidity} %
+      </p>
+    </div>
   </div>
 );
 

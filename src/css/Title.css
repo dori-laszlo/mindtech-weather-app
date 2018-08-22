@@ -2,9 +2,10 @@
   font-family: "Exo", sans-serif;
   font-weight: 100;
   font-size: 6em;
+  text-align: center;
   color: rgba(255, 255, 255, 0.75);
   margin: 5% auto 0 auto;
-  line-height: .8em; }
+  line-height: 1em; }
 
 .title-sub {
   font-family: "Grand Hotel", cursive;
