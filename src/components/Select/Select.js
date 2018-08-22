@@ -1,6 +1,7 @@
 import React from 'react';
 // It needs to read the city-list file to gain the data from it dynamically into the select options.
-import cities from '../data/city-list';
+import cities from '../../data/city-list';
+import './Select.css';
 
 // Select must be in a <form>, to have an "onSubmit" and "onChange" event, which can trigger the
 // handleSubmit and handleChange methods in App.js via props.

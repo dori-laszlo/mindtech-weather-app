@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Logo from './components/Logo';
-import Title from './components/Title';
-import Select from './components/Select';
-import getDataFromApi from './api/getDataFromApi';
-import WeatherTile from './components/WeatherTile';
-import './css/main.css';
+import Logo from './components/Logo/Logo';
+import Title from './components/Title/Title';
+import Select from './components/Select/Select';
+import getDataFromApi from './utilities/getDataFromApi';
+import WeatherTile from './components/WeatherTile/WeatherTile';
+import './App.css';
 
 class App extends Component {
   // The state object will contain the ID of the selected city, to forward it later
