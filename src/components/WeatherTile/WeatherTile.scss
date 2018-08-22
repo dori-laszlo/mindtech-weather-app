@@ -26,6 +26,12 @@
     padding: 20px;
     width: 80%;
   }
+
+  @media screen and (max-width:1024px) and (orientation:portrait) {
+    width: 70%;
+    padding: 60px;
+    margin-top: 60px;
+  }
 }
 
 .tile-city {
@@ -93,4 +99,8 @@
 .description, .humidity {
   color: #D35E5E;
   margin: 0;
+
+  @media screen and (max-width:1024px) and (orientation:portrait) {
+    font-size: 1.5em;
+  }
 }
