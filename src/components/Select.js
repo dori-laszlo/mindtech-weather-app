@@ -7,7 +7,9 @@ import cities from '../data/city-list';
 const Select = props => (
   <form onSubmit={props.submit}>
     <select id="select-city" onChange={props.change}>
-      <option value="">--Select a city--</option>
+    {/* The default value on this option provides that the API call doesn't triggered
+    when this option is selected */}
+      <option value="default">--Select a city--</option>
       {/* This part iterates on the array of the city data and gain the values from it. */}
       {cities.map(city => (
         <option value={city.id}>

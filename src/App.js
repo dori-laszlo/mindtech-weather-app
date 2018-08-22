@@ -10,7 +10,7 @@ class App extends Component {
   // The state object will contain the ID of the selected city, to forward it later
   // to the url in the API call as a city id to identify the selected city, which is null by default.
   state = {
-    selectedCity: null,
+    selectedCity: 'default',
     city: null,
     country: null,
     temperature: null,
@@ -35,17 +35,23 @@ class App extends Component {
   // It sets the state object to the data get from the getDataFromApi function.
   handleSubmit = e => {
     e.preventDefault();
-    getDataFromApi(this.state.selectedCity).then(data =>
+    if (this.state.selectedCity !== 'default') {
+      getDataFromApi(this.state.selectedCity).then(data =>
+        this.setState({
+          city: data.name,
+          country: data.sys.country,
+          temperature: data.main.temp,
+          description: data.weather[0].description,
+          humidity: data.main.humidity,
+          // This line sets the weatherTile component visible by changing its className.
+          class: 'displayed',
+        }),
+      );
+    } else {
       this.setState({
-        city: data.name,
-        country: data.sys.country,
-        temperature: data.main.temp,
-        description: data.weather[0].description,
-        humidity: data.main.humidity,
-        // This line sets the weatherTile component visible by changing its className.
-        class: 'displayed',
-      }),
-    );
+        selectedCity: 'default',
+      });
+    }
   };
 
   render() {
