@@ -4,7 +4,7 @@ import Title from './components/Title';
 import Select from './components/Select';
 import getDataFromApi from './api/getDataFromApi';
 import WeatherTile from './components/WeatherTile';
-import './App.css';
+import './css/main.css';
 
 class App extends Component {
   // The state object will contain the ID of the selected city, to forward it later
@@ -16,6 +16,8 @@ class App extends Component {
     temperature: null,
     description: null,
     humidity: null,
+    // This stands for to change the weatherTile visible, because it's unvisible unless we press the submit button.
+    class: 'none',
   };
 
   // This method handles the event when select option has changed in the form.
@@ -40,6 +42,8 @@ class App extends Component {
         temperature: data.main.temp,
         description: data.weather[0].description,
         humidity: data.main.humidity,
+        // This line sets the weatherTile component visible by changing its className.
+        class: 'displayed',
       }),
     );
   };
@@ -58,6 +62,7 @@ class App extends Component {
           temperature={this.state.temperature}
           description={this.state.description}
           humidity={this.state.humidity}
+          class={this.state.class}
         />
       </main>
     );

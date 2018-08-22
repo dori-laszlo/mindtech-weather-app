@@ -2,9 +2,9 @@ import React from 'react';
 
 const Logo = props => (
   <svg
-    className="logo"
+    id="logo"
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="-92.2 -84.7 1000 1000"
+    viewBox="-92.2 -84.7 682.9 685.5"
   >
     <path
       fill="#FFF"

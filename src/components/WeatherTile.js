@@ -8,8 +8,13 @@ const WeatherTile = props => (
       <p id="tile-country">{props.country}</p>
     </div>
     <p>{props.description}</p>
-    <p id='temp'>{props.temperature} °C</p>
-    <p id='humidity'>Humidity: {props.humidity} %</p>
+    {/* The className is coming from the state via props. On clicking the button this class turns to "displayed" */}
+    <p className={props.class} id="temp">
+      {props.temperature} °C
+    </p>
+    <p className={props.class} id="humidity">
+      Humidity: {props.humidity} %
+    </p>
   </div>
 );
 
