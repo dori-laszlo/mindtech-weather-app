@@ -8,7 +8,7 @@ import './Select.css';
 const Select = props => (
   <form onSubmit={props.submit}>
     <select id="select-city" onChange={props.change}>
-    {/* The default value on this option provides that the API call doesn't triggered
+      {/* The default value on this option provides that the API call doesn't triggered
     when this option is selected */}
       <option value="default">--Select a city--</option>
       {/* This part iterates on the array of the city data and gain the values from it. */}
@@ -17,9 +17,16 @@ const Select = props => (
           {city.name} ({city.country})
         </option>
       ))}
+      <option value="cica">cica</option>
     </select>
     {/* This gets its className from the state's classSubmit value. */}
-    <input id={props.idSubmit} className="submit-button" type="submit" value="Find!" onSubmit={props.submit} />
+    <input
+      id={props.idSubmit}
+      className="submit-button"
+      type="submit"
+      value="Find!"
+      onSubmit={props.submit}
+    />
   </form>
 );
 

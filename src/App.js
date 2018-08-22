@@ -19,6 +19,7 @@ class App extends Component {
     // This stands for to change the weatherTile visible, because it's unvisible unless we press the submit button.
     class: 'none',
     idSubmit: 'button-none',
+    isCica: 'background',
   };
 
   // This method handles the event when select option has changed in the form.
@@ -28,16 +29,26 @@ class App extends Component {
     const cityId = e.target.value;
     // If the submit button doesn't displayed which is the default and the selected option is not the default,
     // makes the button displayed by changing its idSubmit class is the state.
-    if (this.state.idSubmit !== 'displayed' && cityId !== 'default') {
+    if (
+      this.state.idSubmit !== 'displayed' &&
+      cityId !== 'default' &&
+      cityId !== 'cica'
+    ) {
       this.setState({
         selectedCity: cityId,
         idSubmit: 'button-displayed',
+        isCica: 'background',
       });
       // Else leave it or make it unvisible.
+    } else if (cityId === 'cica') {
+      this.setState({
+        isCica: 'cica',
+      });
     } else {
       this.setState({
         idSubmit: 'button-none',
         class: 'none',
+        isCica: 'background',
       });
     }
   };
@@ -69,7 +80,7 @@ class App extends Component {
 
   render() {
     return (
-      <main className="background">
+      <main className={this.state.isCica}>
         <header>
           <Logo />
           <Title />
