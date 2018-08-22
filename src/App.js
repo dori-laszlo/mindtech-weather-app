@@ -37,6 +37,7 @@ class App extends Component {
     } else {
       this.setState({
         classSubmit: 'button-none',
+        class: 'none',
       });
     }
   };
