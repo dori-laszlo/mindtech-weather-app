@@ -18,9 +18,7 @@
     .displayed {
       width: 70%;
       flex-direction: column;
-      background-color: rgba(255, 255, 255, 0.1); } }
-  @media screen and (max-width: 320px) {
-    .displayed {
+      background-color: rgba(255, 255, 255, 0.1);
       padding: 20px;
       width: 80%; } }
   @media screen and (max-width: 1024px) and (orientation: portrait) {
@@ -28,6 +26,10 @@
       width: 70%;
       padding: 60px;
       margin-top: 60px; } }
+  @media screen and (width: 375px) and (height: 812px) {
+    .displayed {
+      width: 70%;
+      padding: 30px; } }
 
 .tile-city {
   font-size: 3em;

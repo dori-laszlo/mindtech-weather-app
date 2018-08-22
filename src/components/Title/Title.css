@@ -12,6 +12,9 @@
   @media screen and (max-width: 1024px) and (orientation: portrait) {
     .title {
       font-size: 7em; } }
+  @media screen and (width: 375px) and (height: 812px) {
+    .title {
+      font-size: 3em; } }
 
 .title-sub {
   font-family: "Grand Hotel", cursive;
@@ -25,3 +28,6 @@
   @media screen and (max-width: 1024px) and (orientation: portrait) {
     .title-sub {
       font-size: 4em; } }
+  @media screen and (width: 375px) and (height: 812px) {
+    .title-sub {
+      font-size: 2em; } }

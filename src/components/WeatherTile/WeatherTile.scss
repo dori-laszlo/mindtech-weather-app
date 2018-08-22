@@ -20,9 +20,6 @@
     width: 70%;
     flex-direction: column;
     background-color: rgba(255, 255, 255, .1);
-  }
-
-  @media screen and (max-width:320px) {
     padding: 20px;
     width: 80%;
   }
@@ -31,6 +28,11 @@
     width: 70%;
     padding: 60px;
     margin-top: 60px;
+  }
+
+  @media screen and (width:375px) and (height:812px) {
+    width: 70%;
+    padding: 30px;
   }
 }
 

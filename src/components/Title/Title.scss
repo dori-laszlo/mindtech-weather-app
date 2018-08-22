@@ -14,6 +14,10 @@
   @media screen and (max-width:1024px) and (orientation:portrait) {
     font-size: 7em;
   }
+
+  @media screen and (width:375px) and (height:812px) {
+    font-size: 3em;
+  }
 }
 
 .title-sub {
@@ -29,6 +33,10 @@
 
   @media screen and (max-width:1024px) and (orientation:portrait) {
     font-size: 4em;
+  }
+
+  @media screen and (width:375px) and (height:812px) {
+    font-size: 2em;
   }
 }
 
