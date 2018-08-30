@@ -9,7 +9,7 @@
   border-radius: 20px;
   border: 2px solid rgba(38, 228, 168, 0.3);
   padding: 30px;
-  font-family: "Exo", Helvetica, sans-serif;
+  font-family: 'Exo', Helvetica, sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -20,7 +20,7 @@
       min-width: 100%;
       padding: 30px 20px 20px 20px;
       background-color: rgba(255, 255, 255, 0.1); } }
-  @media screen and (orientation: landscape) and (max-height: 1024px) {
+  @media screen and (orientation: landscape) and (max-height: 414px) {
     .tile-displayed {
       background-color: rgba(255, 255, 255, 0.1); } }
   @media screen and (orientation: portrait) and (min-width: 768px) {
@@ -39,7 +39,7 @@
     .tile-city {
       font-size: 2.5em;
       text-align: center; } }
-  @media screen and (orientation: landscape) and (max-height: 1024px) {
+  @media screen and (orientation: landscape) and (max-height: 414px) {
     .tile-city {
       font-size: 2.5em; } }
   @media screen and (orientation: portrait) and (min-width: 768px) {
@@ -58,9 +58,6 @@
       text-align: center; } }
   @media screen and (orientation: portrait) and (min-width: 768px) {
     .tile-country {
-      text-align: center; } }
-  @media screen and (orientation: portrait) and (min-width: 768px) {
-    .tile-country {
       text-align: center;
       font-size: 2em; } }
 
@@ -70,24 +67,17 @@
 
 .city-name-container {
   max-width: 60%; }
-  @media screen and (orientation: portrait) and (max-width: 767px) {
-    .city-name-container {
-      max-width: 100%; } }
-  @media screen and (orientation: portrait) and (min-width: 768px) {
+  @media screen and (orientation: portrait) {
     .city-name-container {
       max-width: 100%; } }
 
 .weather-data {
   text-align: start;
   margin-left: 50px; }
-  @media screen and (orientation: portrait) and (max-width: 767px) {
+  @media screen and (orientation: portrait) {
     .weather-data {
       text-align: center;
       margin: 20px 0; } }
-  @media screen and (orientation: portrait) and (min-width: 768px) {
-    .weather-data {
-      margin: 20px 0;
-      text-align: center; } }
 
 .temp {
   color: white;
@@ -98,17 +88,19 @@
   @media screen and (orientation: portrait) and (max-width: 767px) {
     .temp {
       font-size: 2.5em; } }
-  @media screen and (orientation: landscape) and (max-height: 767px) {
+  @media screen and (orientation: landscape) and (max-height: 414px) {
     .temp {
       font-size: 2.5em; } }
   @media screen and (orientation: portrait) and (min-width: 768px) {
     .temp {
       font-size: 4em;
-      margin-top: .8em; } }
+      margin-top: 0.8em; } }
 
-.description, .humidity {
-  color: #D35E5E;
+.description,
+.humidity {
+  color: #d35e5e;
   margin: 0; }
   @media screen and (orientation: portrait) and (min-width: 768px) {
-    .description, .humidity {
+    .description,
+    .humidity {
       font-size: 1.5em; } }

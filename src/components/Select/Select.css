@@ -13,7 +13,7 @@
   border: 2px solid #26e4a8;
   -webkit-border-radius: 40px;
   border-radius: 40px;
-  font: normal 12px "Exo", Helvetica, sans-serif;
+  font: normal 12px 'Exo', Helvetica, sans-serif;
   color: #26e4a8;
   text-align: center;
   -o-text-overflow: clip;
@@ -47,13 +47,13 @@
   border: 2px solid rgba(241, 236, 236, 0.329);
   -webkit-border-radius: 30px;
   border-radius: 30px;
-  font: normal 12px "Exo", Helvetica, sans-serif;
+  font: normal 12px 'Exo', Helvetica, sans-serif;
   color: white;
   text-align: center;
   -o-text-overflow: clip;
   text-overflow: clip;
   letter-spacing: 1px;
-  background: #D35E5E;
+  background: #d35e5e;
   -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
   -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
   -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
