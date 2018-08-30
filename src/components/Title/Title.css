@@ -4,30 +4,32 @@
   font-size: 6em;
   text-align: center;
   color: rgba(255, 255, 255, 0.75);
-  margin: 5% auto 0 auto;
+  margin: 0 auto;
   line-height: 1em; }
-  @media screen and (max-width: 375px) {
+  @media screen and (orientation: portrait) and (max-width: 767px) {
     .title {
-      font-size: 3em; } }
-  @media screen and (max-width: 1024px) and (orientation: portrait) {
+      font-size: 2.8em; } }
+  @media screen and (orientation: landscape) and (max-height: 1024px) {
     .title {
-      font-size: 7em; } }
-  @media screen and (width: 375px) and (height: 812px) {
+      font-size: 2.8em; } }
+  @media screen and (orientation: portrait) and (min-width: 768px) {
     .title {
-      font-size: 3em; } }
+      font-size: 6em; } }
 
 .title-sub {
   font-family: "Grand Hotel", cursive;
   color: rgba(255, 255, 255, 0.85);
   font-size: 3em;
   text-align: center;
-  margin-top: 0; }
-  @media screen and (max-width: 375px) {
+  margin: 0 auto; }
+  @media screen and (orientation: portrait) and (max-width: 767px) {
     .title-sub {
-      font-size: 2em; } }
-  @media screen and (max-width: 1024px) and (orientation: portrait) {
+      font-size: 2.2em; } }
+  @media screen and (orientation: landscape) and (max-height: 1024px) {
     .title-sub {
-      font-size: 4em; } }
-  @media screen and (width: 375px) and (height: 812px) {
+      font-size: 2em;
+      line-height: .8em; } }
+  @media screen and (orientation: portrait) and (min-width: 768px) {
     .title-sub {
-      font-size: 2em; } }
+      font-size: 3em;
+      line-height: .9em; } }

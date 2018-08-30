@@ -6,8 +6,8 @@ import './Select.css';
 // Select must be in a <form>, to have an "onSubmit" and "onChange" event, which can trigger the
 // handleSubmit and handleChange methods in App.js via props.
 const Select = props => (
-  <form onSubmit={props.submit}>
-    <select id="select-city" onChange={props.change}>
+  <form className="weather-form" onSubmit={props.submit}>
+    <select className="select-city" onChange={props.change}>
     {/* The default value on this option provides that the API call doesn't triggered
     when this option is selected */}
       <option value="default">--Select a city--</option>
@@ -19,7 +19,7 @@ const Select = props => (
       ))}
     </select>
     {/* This gets its className from the state's classSubmit value. */}
-    <input id={props.idSubmit} className="submit-button" type="submit" value="Find!" onSubmit={props.submit} />
+    <input className={props.classSubmit} type="submit" value="Find!" onSubmit={props.submit} />
   </form>
 );
 

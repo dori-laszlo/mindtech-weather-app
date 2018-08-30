@@ -1,15 +1,12 @@
 #logo {
-  height: 130px;
-  margin: 50px auto 0 auto;
+  height: 120px;
   width: 100%; }
-  @media screen and (max-width: 375px) {
+  @media screen and (orientation: portrait) and (max-width: 767px) {
     #logo {
-      height: 80px; } }
-  @media screen and (max-width: 1024px) and (orientation: portrait) {
+      height: 10vh; } }
+  @media screen and (orientation: landscape) and (max-height: 1024px) {
     #logo {
-      height: 150px;
-      margin-top: 100px; } }
-  @media screen and (width: 375px) and (height: 812px) {
+      height: 10vh; } }
+  @media screen and (orientation: portrait) and (min-width: 768px) {
     #logo {
-      height: 100px;
-      margin-top: 50px; } }
+      height: 10vh; } }

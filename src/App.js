@@ -17,27 +17,27 @@ class App extends Component {
     description: null,
     humidity: null,
     // This stands for to change the weatherTile visible, because it's unvisible unless we press the submit button.
-    class: 'none',
-    idSubmit: 'button-none',
+    classTile: 'tile-none',
+    classSubmit: 'button-none',
   };
 
   // This method handles the event when select option has changed in the form.
   // It takes the selected option's value which is the "id" key of each city from the city-list.
-  // Then it set the selectedCity in the state object to this unique ID, and the idSubmit to displayed or not displayed.
+  // Then it set the selectedCity in the state object to this unique ID, and the classSubmit to displayed or not displayed.
   handleChange = e => {
     const cityId = e.target.value;
     // If the submit button doesn't displayed which is the default and the selected option is not the default,
-    // makes the button displayed by changing its idSubmit class is the state.
-    if (this.state.idSubmit !== 'displayed' && cityId !== 'default') {
+    // makes the button displayed by changing its classSubmit class is the state.
+    if (this.state.classSubmit !== 'displayed' && cityId !== 'default') {
       this.setState({
         selectedCity: cityId,
-        idSubmit: 'button-displayed',
+        classSubmit: 'button-displayed',
       });
       // Else leave it or make it unvisible.
     } else {
       this.setState({
-        idSubmit: 'button-none',
-        class: 'none',
+        classSubmit: 'button-none',
+        classTile: 'tile-none',
       });
     }
   };
@@ -57,12 +57,12 @@ class App extends Component {
           description: data.weather[0].description,
           humidity: data.main.humidity,
           // This line sets the weatherTile component visible by changing its className.
-          class: 'displayed',
+          classTile: 'tile-displayed',
         }),
       );
     } else {
       this.setState({
-        idSubmit: 'button-none',
+        classSubmit: 'button-none',
       });
     }
   };
@@ -77,7 +77,7 @@ class App extends Component {
         <Select
           submit={this.handleSubmit}
           change={this.handleChange}
-          idSubmit={this.state.idSubmit}
+          classSubmit={this.state.classSubmit}
         />
         <WeatherTile
           city={this.state.city}
@@ -85,7 +85,7 @@ class App extends Component {
           temperature={this.state.temperature}
           description={this.state.description}
           humidity={this.state.humidity}
-          class={this.state.class}
+          class={this.state.classTile}
         />
       </main>
     );

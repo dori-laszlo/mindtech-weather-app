@@ -1,11 +1,10 @@
-.none {
+.tile-none {
   display: none; }
 
-.displayed {
-  max-width: 90%;
-  min-width: 40%;
+.tile-displayed {
+  min-width: 480px;
   background-color: rgba(255, 255, 255, 0.2);
-  margin: 20px auto 0 auto;
+  margin: 0 auto;
   -webkit-border-radius: 20px;
   border-radius: 20px;
   border: 2px solid rgba(38, 228, 168, 0.3);
@@ -13,23 +12,22 @@
   font-family: "Exo", Helvetica, sans-serif;
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
-  @media screen and (max-width: 375px) {
-    .displayed {
-      width: 70%;
+  justify-content: space-between;
+  grid-row: 3/3; }
+  @media screen and (orientation: portrait) and (max-width: 767px) {
+    .tile-displayed {
       flex-direction: column;
+      min-width: 100%;
+      padding: 30px 20px 20px 20px;
+      background-color: rgba(255, 255, 255, 0.1); } }
+  @media screen and (orientation: landscape) and (max-height: 1024px) {
+    .tile-displayed {
+      background-color: rgba(255, 255, 255, 0.1); } }
+  @media screen and (orientation: portrait) and (min-width: 768px) {
+    .tile-displayed {
+      min-width: 100%;
       background-color: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      width: 80%; } }
-  @media screen and (max-width: 1024px) and (orientation: portrait) {
-    .displayed {
-      width: 70%;
-      padding: 60px;
-      margin-top: 60px; } }
-  @media screen and (width: 375px) and (height: 812px) {
-    .displayed {
-      width: 70%;
-      padding: 30px; } }
+      flex-direction: column; } }
 
 .tile-city {
   font-size: 3em;
@@ -37,10 +35,17 @@
   margin: 0;
   text-align: start;
   line-height: 1em; }
-  @media screen and (max-width: 375px) {
+  @media screen and (orientation: portrait) and (max-width: 767px) {
     .tile-city {
-      font-size: 2em;
+      font-size: 2.5em;
       text-align: center; } }
+  @media screen and (orientation: landscape) and (max-height: 1024px) {
+    .tile-city {
+      font-size: 2.5em; } }
+  @media screen and (orientation: portrait) and (min-width: 768px) {
+    .tile-city {
+      text-align: center;
+      font-size: 4em; } }
 
 .tile-country {
   font-size: 1.5em;
@@ -48,10 +53,16 @@
   text-align: start;
   margin: 0;
   font-weight: 100; }
-  @media screen and (max-width: 375px) {
+  @media screen and (orientation: portrait) and (max-width: 767px) {
     .tile-country {
-      font-size: 1.2em;
       text-align: center; } }
+  @media screen and (orientation: portrait) and (min-width: 768px) {
+    .tile-country {
+      text-align: center; } }
+  @media screen and (orientation: portrait) and (min-width: 768px) {
+    .tile-country {
+      text-align: center;
+      font-size: 2em; } }
 
 .description {
   font-size: 1em;
@@ -59,18 +70,24 @@
 
 .city-name-container {
   max-width: 60%; }
-  @media screen and (max-width: 375px) {
+  @media screen and (orientation: portrait) and (max-width: 767px) {
+    .city-name-container {
+      max-width: 100%; } }
+  @media screen and (orientation: portrait) and (min-width: 768px) {
     .city-name-container {
       max-width: 100%; } }
 
 .weather-data {
   text-align: start;
   margin-left: 50px; }
-  @media screen and (max-width: 375px) {
+  @media screen and (orientation: portrait) and (max-width: 767px) {
     .weather-data {
-      font-size: 1em;
       text-align: center;
-      margin: 20px auto 0 auto; } }
+      margin: 20px 0; } }
+  @media screen and (orientation: portrait) and (min-width: 768px) {
+    .weather-data {
+      margin: 20px 0;
+      text-align: center; } }
 
 .temp {
   color: white;
@@ -78,13 +95,20 @@
   margin: 0;
   line-height: 1em;
   margin-bottom: 5px; }
-  @media screen and (max-width: 320px) {
+  @media screen and (orientation: portrait) and (max-width: 767px) {
     .temp {
       font-size: 2.5em; } }
+  @media screen and (orientation: landscape) and (max-height: 767px) {
+    .temp {
+      font-size: 2.5em; } }
+  @media screen and (orientation: portrait) and (min-width: 768px) {
+    .temp {
+      font-size: 4em;
+      margin-top: .8em; } }
 
 .description, .humidity {
   color: #D35E5E;
   margin: 0; }
-  @media screen and (max-width: 1024px) and (orientation: portrait) {
+  @media screen and (orientation: portrait) and (min-width: 768px) {
     .description, .humidity {
       font-size: 1.5em; } }

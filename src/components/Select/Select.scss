@@ -1,15 +1,15 @@
-#button-none {
+.button-none {
   display: none;
 }
 
-#select-city {
+.select-city {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   width: 200px;
   height: 40px;
   cursor: pointer;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   padding: 0 10px;
   border: 2px solid rgb(38, 228, 168);
   -webkit-border-radius: 40px;
@@ -25,29 +25,23 @@
   -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
   -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
   transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  grid-row: 2/2;
 
-  @media screen and (max-width:1024px) and (orientation:portrait) {
-    width: 300px;
+  @media screen and (orientation: portrait) and (min-width:768px) {
     height: 60px;
-    font-size: 20px;
+    width: 300px;
+    font-size: 18px;
     padding: 0 20px;
-  }
-
-  @media screen and (width:375px) and (height:812px) {
-    width: 150px;
-    height: 40px;
-    font-size: 12px;
-    margin-top: 50px;
   }
 }
 
 
-#select-city:hover {
+.select-city:hover {
   color: rgba(255,255,255,1);
   background: rgb(11, 233, 163);
 }
 
-.submit-button {
+.button-displayed {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -70,16 +64,20 @@
   -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
   transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
 
-  @media screen and (max-width:1024px) and (orientation:portrait) {
+  @media screen and (orientation: portrait) and (min-width:768px) {
     height: 60px;
-    width: 70px;
-    font-size: 20px;
+    width: 100px;
+    font-size: 18px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
   }
+}
 
-  @media screen and (width:375px) and (height:812px) {
-    width: 50px;
-    height: 40px;
-    font-size: 12px;
+.weather-form {
+  margin: 0 auto;
+
+  @media screen and (orientation: portrait) and (max-width:767px) {
+    display: flex;
   }
 }
 

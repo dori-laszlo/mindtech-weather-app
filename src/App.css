@@ -1,6 +1,19 @@
 body {
-  padding: 0;
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0; }
 
 .background {
   background: linear-gradient(to bottom, rgba(11, 1, 12, 0.7) 0%, rgba(222, 75, 49, 0.5) 100%), url("./img/background.jpg");
@@ -8,6 +21,19 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+  display: grid;
+  grid-row-gap: 40px;
+  grid-template-rows: min-content max-content min-content;
+  align-content: center;
+  padding: 50px; }
+  @media screen and (orientation: portrait) and (max-width: 767px) {
+    .background {
+      grid-row-gap: 30px;
+      padding: 50px 20px; } }
+  @media screen and (orientation: landscape) and (max-height: 767px) {
+    .background {
+      grid-row-gap: 10px; } }
+  @media screen and (orientation: portrait) and (min-width: 768px) {
+    .background {
+      grid-row-gap: 50px;
+      padding: 50px 10%; } }
