@@ -23,7 +23,34 @@ body {
       rgba(11, 1, 12, 0.7) 0%,
       rgba(222, 75, 49, 0.5) 100%
     ),
-    url('./img/background.jpg');
+    url('../../img/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: grid;
+  grid-row-gap: 40px;
+  grid-template-rows: min-content max-content min-content;
+  align-content: center;
+  padding: 50px;
+
+  @media screen and (orientation: portrait) and (max-width: 767px) {
+    grid-row-gap: 30px;
+    padding: 50px 20px;
+  }
+
+  @media screen and (orientation: landscape) and (max-height: 414px) {
+    grid-row-gap: 10px;
+  }
+
+  @media screen and (orientation: portrait) and (min-width: 768px) {
+    grid-row-gap: 50px;
+    padding: 50px 10%;
+  }
+}
+
+.cica {
+  background: url("../../img/cica.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

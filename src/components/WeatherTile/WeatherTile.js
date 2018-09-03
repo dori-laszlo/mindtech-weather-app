@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './WeatherTile.css';
 
 // This component can display the weather data from the state of App.js via props.
@@ -21,5 +22,18 @@ const WeatherTile = props => (
     </section>
   </article>
 );
+
+WeatherTile.propTypes = {
+  class: PropTypes.string,
+  city: PropTypes.string.isRequired,
+  country: PropTypes.string.isRequired,
+  temperature: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
+  humidity: PropTypes.number.isRequired,
+};
+
+WeatherTile.defaultProps = {
+  class: 'tile-none',
+};
 
 export default WeatherTile;

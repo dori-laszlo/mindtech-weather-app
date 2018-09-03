@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Logo from './components/Logo/Logo';
-import Title from './components/Title/Title';
-import Select from './components/Select/Select';
-import getDataFromApi from './utilities/getDataFromApi';
-import WeatherTile from './components/WeatherTile/WeatherTile';
+import Logo from '../Logo/Logo';
+import Title from '../Title/Title';
+import Select from '../Select/Select';
+import getDataFromApi from '../../utilities/getDataFromApi';
+import WeatherTile from '../WeatherTile/WeatherTile';
 import './App.css';
 
 class App extends Component {
@@ -19,6 +19,7 @@ class App extends Component {
     // This stands for to change the weatherTile visible, because it's unvisible unless we press the submit button.
     classTile: 'tile-none',
     classSubmit: 'button-none',
+    isCica: 'background',
   };
 
   // This method handles the event when select option has changed in the form.
@@ -28,16 +29,28 @@ class App extends Component {
     const cityId = e.target.value;
     // If the submit button doesn't displayed which is the default and the selected option is not the default,
     // makes the button displayed by changing its classSubmit class is the state.
-    if (this.state.classSubmit !== 'displayed' && cityId !== 'default') {
+    if (
+      this.state.idSubmit !== 'displayed' &&
+      cityId !== 'default' &&
+      cityId !== 'cica'
+    ) {
       this.setState({
         selectedCity: cityId,
         classSubmit: 'button-displayed',
+        isCica: 'background',
       });
       // Else leave it or make it unvisible.
+    } else if (cityId === 'cica') {
+      this.setState({
+        isCica: 'cica',
+        classSubmit: 'button-none',
+        classTile: 'tile-none',
+      });
     } else {
       this.setState({
         classSubmit: 'button-none',
         classTile: 'tile-none',
+        isCica: 'background',
       });
     }
   };
@@ -69,7 +82,7 @@ class App extends Component {
 
   render() {
     return (
-      <main className="background">
+      <main className={this.state.isCica}>
         <header>
           <Logo />
           <Title />
@@ -93,3 +106,4 @@ class App extends Component {
 }
 
 export default App;
+
