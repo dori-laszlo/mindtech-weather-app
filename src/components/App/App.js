@@ -30,7 +30,7 @@ class App extends Component {
     // If the submit button doesn't displayed which is the default and the selected option is not the default,
     // makes the button displayed by changing its classSubmit class is the state.
     if (
-      this.state.idSubmit !== 'displayed' &&
+      this.state.classSubmit !== 'displayed' &&
       cityId !== 'default' &&
       cityId !== 'cica'
     ) {

@@ -25,15 +25,21 @@ const WeatherTile = props => (
 
 WeatherTile.propTypes = {
   class: PropTypes.string,
-  city: PropTypes.string.isRequired,
-  country: PropTypes.string.isRequired,
-  temperature: PropTypes.number.isRequired,
-  description: PropTypes.string.isRequired,
-  humidity: PropTypes.number.isRequired,
+  city: PropTypes.string,
+  country: PropTypes.string,
+  temperature: PropTypes.number,
+  description: PropTypes.string,
+  humidity: PropTypes.number,
 };
 
 WeatherTile.defaultProps = {
   class: 'tile-none',
+  city: null,
+  country: null,
+  temperature: null,
+  description: null,
+  humidity: null,
 };
+
 
 export default WeatherTile;
